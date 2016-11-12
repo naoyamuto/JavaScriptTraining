@@ -4,15 +4,10 @@ describe('ステージ5（意図通りに非同期処理を利用できる）', 
   describe('Promise 編', function() {
     it('resolve ハンドラーを書ける', function(testDone){
       var promise = Promise.resolve('resolved!');
-
-      // チュートリアル
-      //
-      // ここに下記のコードを記述してください。
-      //
-      // promise.then(function(msg) {
-      //   expect(msg).to.equal('resolved!');
-      //   testDone();
-      // });
+      promise.then(function(msg) {
+        expect(msg).to.equal('resolved!');
+        testDone();
+      });
     });
 
 
